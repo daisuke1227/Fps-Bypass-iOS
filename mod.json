@@ -17,8 +17,7 @@
     "name": "fps bypass",
     "description": "enable fps bypass",
     "default": false
-}
-
+},
 		"int-setting-example": {
     "type": "int",
     "name": "fps value",
