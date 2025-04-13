@@ -1,9 +1,6 @@
 {
 	"geode": "4.3.1",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
 		"ios": "2.2074"
 	},
 	"id": "gtxripmxt.fps_bypass_for_ios",
@@ -11,4 +8,19 @@
 	"version": "v1.0.0",
 	"developer": "Gtxripmxt",
 	"description": "A simple fps bypass mod for ios :D"
+	"links": {
+            "source": "https://github.com/Gtxripmxt/Fps-Bypass-iOS"
+	}
+	"settings": {
+		"slider": {
+            "name": "maximum fps value",
+            "type": "float",
+            "default": 60,
+            "min":  5,
+            "max": 720,
+            "control": {
+                "slider": true
+                       }
+	                }
+	           }
 }
