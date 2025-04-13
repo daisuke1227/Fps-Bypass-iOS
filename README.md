@@ -9,5 +9,8 @@ Go to this mod's settings and change the fps value to whatever you want!(720 max
 
 this mod is not finished yet so idk yea i need to actually code tha thingy.
 
+## Unsuported/Unstable Devices
+I do not recommend using this mod on weaker and/or older iphones.
+
 ## To Do List
 1. Code lol
