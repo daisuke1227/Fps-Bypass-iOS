@@ -9,3 +9,5 @@ Go to this mod's settings and change the fps value to whatever you want!(720 max
 
 this mod is not finished yet so idk yea i need to actually code tha thingy.
 
+## To Do List
+1. Code lol
