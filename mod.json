@@ -12,15 +12,42 @@
             "source": "https://github.com/Gtxripmxt/Fps-Bypass-iOS"
 	},
 	"settings": {
-		"slider": {
-            "name": "maximum fps value",
-            "type": "float",
-            "default": 60,
-            "min":  5,
-            "max": 720,
-            "control": {
-                "slider": true
-                       }
-	                 }
+		"bool-setting-example": {
+    "type": "bool",
+    "name": "fps bypass",
+    "description": "enable fps bypass",
+    "default": false
+}
+
+		"int-setting-example": {
+    "type": "int",
+    "name": "fps value",
+    "description": "set fps value 5-720",
+    "default": 60,
+    // Minimum value
+    "min": 5,
+    // Maximum value
+    "max": 720,
+    // Define the controls for this setting
+    "controls": {
+        // Enable the small (green) arrow controls
+        "arrows": true,
+        // Control how much the small (green) arrows should increment/decrement 
+        // the setting's value when clicked
+        "arrow-step": 1,
+        // Enable the secondary (pink) arrow controls
+        "big-arrows": false,
+        // Control how much the secondary (pink) arrows should increment/
+        // decrement the setting's value when clicked
+        "big-arrow-step": 5,
+        // Enable the slider
+        "slider": true,
+        // Control the slider's snap step size
+        "slider-step": 1,
+        // Enable the text input
+        "input": false
+    }
+}
+
 	           }
 }
