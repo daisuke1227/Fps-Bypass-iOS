@@ -14,10 +14,6 @@ public:
     void onSettingsButton(cocos2d::CCObject*);
 };
 
-namespace cocos2d {
-    class CCMenuItemSprite; 
-}
-
 void PauseWithImageButton::customSetup() {
     PauseLayer::customSetup();
 
@@ -27,11 +23,11 @@ void PauseWithImageButton::customSetup() {
         return;
     }
 
-    auto button = cocos2d::CCMenuItemSprite::create(
+    auto button = CCMenuItemSprite::create(
         sprite,
         sprite,
         this,
-        menu_selector(PauseWithImageButton::onSettingsButton)
+        menu_selector(PauseWithImageButton::onSettingsButton) // whowza
     );
 
     auto winSize = cocos2d::CCDirector::sharedDirector()->getWinSize();
@@ -44,5 +40,5 @@ void PauseWithImageButton::customSetup() {
 }
 
 void PauseWithImageButton::onSettingsButton(cocos2d::CCObject*) {
-    geode::openSettingsPopup(Mod::get(), true);
+		geode::openSettingsPopup(Mod::get(), true);
 }
