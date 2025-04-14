@@ -30,7 +30,7 @@ class $modify(PauseWithImageButton, PauseLayer) {
         menu->addChild(button);
         menu->setPosition({0, 0});
         this->addChild(menu);
-    }
+    };
 
     void onSettingsButton(cocos2d::CCObject*) {
     auto popup = SettingsPopup::create(Mod::get());
