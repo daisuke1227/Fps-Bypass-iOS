@@ -15,9 +15,9 @@ public:
 void PauseWithImageButton::customSetup() {
     PauseLayer::customSetup();
 
-    auto sprite = cocos2d::CCSprite::create("pbutton.png");
+    auto sprite = cocos2d::CCSprite::create("button.png");
     if (!sprite) {
-        log::error("Failed to load 'pbutton.png'");
+        log::error("Failed to load 'button.png'");
         return;
     }
 
