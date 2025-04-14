@@ -37,5 +37,5 @@ void PauseWithImageButton::customSetup() {
 }
 
 void PauseWithImageButton::onSettingsButton(cocos2d::CCObject*) {
-    geode::openSettingsPopup(Mod::get());
+   ModSettingsPopup::create(Mod::get())->show();
 }
