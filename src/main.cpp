@@ -33,7 +33,7 @@ class $modify(PauseWithImageButton, PauseLayer) {
     }
 
     void onSettingsButton(cocos2d::CCObject*) {
-        auto popup = geode::Popup<geode::Mod*>* openSettingsPopup(geode::Mod* mod, bool disableGeodeTheme);
+        auto popup = geode::createQuickSettingsPopup(Mod::get());
         popup->show();
     }
 };
