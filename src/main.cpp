@@ -4,6 +4,7 @@
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/modify/PlayerObject.hpp>
 #include <Geode/ui/GeodeUI.hpp>
+#include <Geode/utils/cocos.hpp>
 
 using namespace geode::prelude;
 
