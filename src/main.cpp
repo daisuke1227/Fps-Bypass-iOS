@@ -1,7 +1,7 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/ui/Popup.hpp>
-#include <Geode/ui/GeodeUI.hpp>
+#include <Geode/ui/ModSettingsPopup.hpp>
 #include <Geode/utils/cocos.hpp>
 
 using namespace geode::prelude;
@@ -38,6 +38,6 @@ void PauseWithImageButton::customSetup() {
 }
 
 void PauseWithImageButton::onSettingsButton(cocos2d::CCObject*) {
-    auto popup = SettingsPopup::create(Mod::get());
+    auto popup = ModSettingsPopup::create(Mod::get());
     popup->show();
 }
