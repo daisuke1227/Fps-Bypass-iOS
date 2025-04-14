@@ -1,36 +1,43 @@
-
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PauseLayer.hpp>
-#include <Geode/ui/GeodeUI.hpp>
+#include <Geode/ui/Popup.hpp>
+#include <Geode/ui/SettingsPopup.hpp>
 
 using namespace geode::prelude;
 
 class $modify(PauseWithImageButton, PauseLayer) {
-    bool init(bool p0) {
-        if (!PauseLayer::init(p0)) return false;
+    void customSetup() {
+        PauseLayer::customSetup();
 
-        auto sprite = CCSprite::create("button.png");
+        // Load custom image
+        auto sprite = CCSprite::create("pbutton.png");
         if (!sprite) {
-            log::error("Failed to load button.png");
-            return true;
+            log::error("Could not load pbutton.png");
+            return;
         }
 
-        auto btn = CCMenuItemSpriteExtra::create(
+        // Create button from sprite
+        auto button = CCMenuItemSpriteExtra::create(
             sprite,
             sprite,
             this,
             menu_selector(PauseWithImageButton::onSettingsButton)
         );
 
+        // Position on screen
         auto winSize = CCDirector::sharedDirector()->getWinSize();
-        btn->setPosition({ winSize.width - 30, winSize.height / 2 }); // yes yes yes what am i doing pls what
+        button->setPosition({winSize.width - 40.f, winSize.height / 2});
 
-        this->m_buttonMenu->addChild(btn);
-
-        return true;
+        // Add to the PauseLayer's menu
+        auto menu = CCMenu::create();
+        menu->addChild(button);
+        menu->setPosition(CCPointZero);
+        this->addChild(menu);
     }
 
     void onSettingsButton(CCObject*) {
-        Mod::get()->openSettingsPopup();
+        // Create your mod's settings popup manually
+        auto popup = geode::createQuickSettingsPopup(Mod::get());
+        popup->show();
     }
 };
