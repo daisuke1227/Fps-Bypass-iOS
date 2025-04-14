@@ -1,14 +1,7 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/ui/Popup.hpp>
-#include <Geode/ui/SettingsPopup.hpp>
-
-using namespace geode::prelude;
-
-class $modify(PauseWithImageButton, PauseLayer) {
-    void customSetup() {
-        PauseLayer::customSetup();
-
+#include <Geode/ui/GeodeUI.hpp>
         // Load custom image
         auto sprite = CCSprite::create("pbutton.png");
         if (!sprite) {
