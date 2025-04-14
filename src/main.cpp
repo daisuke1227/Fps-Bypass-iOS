@@ -1,9 +1,9 @@
 #include <Geode/Geode.hpp>
+#include <Geode/modify/EditorPauseLayer.hpp>
+#include <Geode/modify/EndLevelLayer.hpp>
 #include <Geode/modify/PauseLayer.hpp>
-#include <Geode/ui/Popup.hpp> 
-#include <Geode/utils/cocos.hpp>
-#include <Geode/ui/ModSettingsPopup.hpp>
-
+#include <Geode/modify/PlayerObject.hpp>
+#include <Geode/ui/GeodeUI.hpp>
 
 using namespace geode::prelude;
 
