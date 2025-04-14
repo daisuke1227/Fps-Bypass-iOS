@@ -2,6 +2,8 @@
 #include <Geode/modify/PauseLayer.hpp>
 #include <Geode/ui/Popup.hpp> 
 #include <Geode/utils/cocos.hpp>
+#include <Geode/ui/ModSettingsPopup.hpp>
+
 
 using namespace geode::prelude;
 
