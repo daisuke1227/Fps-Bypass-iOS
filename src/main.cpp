@@ -16,23 +16,20 @@ public:
 
 void PauseWithImageButton::customSetup() {
     PauseLayer::customSetup();
-
-    auto sprite = cocos2d::CCSprite::create("button.png");
+    std::string resourcePath = Mod::get()->getResourcesPath() + "button.png";
+    auto sprite = cocos2d::CCSprite::create(resourcePath.c_str());
     if (!sprite) {
-        log::error("Failed to load 'button.png'");
+        log::error("Failed to load '%s'", resourcePath.c_str());
         return;
     }
-
     auto button = CCMenuItemSpriteExtra::create(
         sprite,
         sprite,
         this,
-        menu_selector(PauseWithImageButton::onSettingsButton) // whowza
+        menu_selector(PauseWithImageButton::onSettingsButton)
     );
-
     auto winSize = cocos2d::CCDirector::sharedDirector()->getWinSize();
     button->setPosition({ winSize.width - 40.f, winSize.height / 2 });
-
     auto menu = cocos2d::CCMenu::create();
     menu->addChild(button);
     menu->setPosition({0, 0});
@@ -40,5 +37,5 @@ void PauseWithImageButton::customSetup() {
 }
 
 void PauseWithImageButton::onSettingsButton(cocos2d::CCObject*) {
-		geode::openSettingsPopup(Mod::get(), true);
+    geode::openSettingsPopup(Mod::get(), true);
 }
