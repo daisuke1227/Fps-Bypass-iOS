@@ -23,7 +23,7 @@ void PauseWithImageButton::customSetup() {
         return;
     }
 
-    auto button = CCMenuItemSprite::create(
+    auto button = CCMenuItemSpriteExtra::create(
         sprite,
         sprite,
         this,
