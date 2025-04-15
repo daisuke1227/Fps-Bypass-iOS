@@ -16,7 +16,7 @@ public:
 
 void PauseWithImageButton::customSetup() {
     PauseLayer::customSetup();
-    std::string resourcePath = Mod::get()->getResourcesPath() + "button.png";
+    std::string resourcePath = Mod::get()->getModPath() + "/resources/button.png";
     auto sprite = cocos2d::CCSprite::create(resourcePath.c_str());
     if (!sprite) {
         log::error("Failed to load '%s'", resourcePath.c_str());
